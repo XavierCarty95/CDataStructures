@@ -1,0 +1,39 @@
+
+Arrays:
+    infix - to hold the infix string
+    postfix - to hold the postfix
+
+Other Data Structures:
+    OperatorStack, top is initialized and
+
+
+Algorithm
+
+While not end of the infix sting:
+    TOKEN = GET THE NEXT ELEMENT FORM INFIX STRING
+    IF TOKEN IS AN OPERAND THEN
+    ELSE IF TOKEN IS AN OPERATOR THEN
+        WHILE NOT EMPTY OPERATORSTACK AND PRCD(STACK,TOP)
+            TOP_OPERATOR = POP(OPERATOR)
+            APPEND TOP_OPERATOR WITH THE POSTFIX STRING
+
+        END WHILE
+        IF TOKEN = ')' THEN
+            POP (OPERATORSTACK)
+
+        ELSE
+
+            PUSH(OPERATORSTACK,TOKEN)
+
+        END IF
+
+    END IF
+END WHILE
+
+    WHILE NOT EMPTY OPERATORSTACK:
+        TOP_OPERATOR = POP_OPERATOR
+        APPEND TOP_OPERATOR WITH THE POSTFIX STRING
+
+    END WHILE
+
+    PRINT POSTFIX
